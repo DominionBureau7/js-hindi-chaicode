@@ -22,7 +22,7 @@ let myObj = {
     age: 23,
 } // Objects [mainly in brackets, declaring variable not needed]
 const myFunction =function(){
-    console.log("hello world");
+    // console.log("hello world");
 }
 // console.log(typeof heroes);// = object
 // console.log(typeof bigNumber); // = Bigint
@@ -30,3 +30,23 @@ const myFunction =function(){
 // console.log(typeof scoreValue);// = number
 // console.log(typeof userEmail);// = undefined
 // console.log(typeof myFunction);// = function
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
+////////////Stack memory(Primitive), Heap memory(Non-primitive)///////////////
+
+let myYoutubename = "NadsandTechdotcom";// string = in stacks
+let anotherName = myYoutubename;// also in stacks = gives the reference only
+console.log(myYoutubename);
+console.log(anotherName);// Stacks = keeps reference to the object
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
+}//object created and then stored in heaps
+let userTwo = userOne
+userTwo.email = "hitesh@google.com"// object's data changed 
+console.log(userOne.email);
+console.log(userTwo.email);// Heaps = Keeps the object itself
+
+
