@@ -1,8 +1,11 @@
+// node .github/01_basics/03_conversionOperation.js
+
+///////////////////////////////////Conversions///////////////////////////////////
 let score = "hitesh";
 // console.log(typeof score);
 // console.log(typeof(score));
 
-// node .github/01_basics/03_conversionOperation.js
+
 let valueInNumber = Number(score)
 // console.log(typeof valueInNumber);
 // console.log(valueInNumber);

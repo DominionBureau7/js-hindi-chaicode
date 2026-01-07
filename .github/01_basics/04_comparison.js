@@ -19,7 +19,7 @@
 ///////////////////Avoid these types of comparisons/////////////////////////
 
 //////////////////////////// === [strict check]////////////////////////
-// console.log("2" === 2); = false 
-// console.log("2" == 2); = true
+// console.log("2" === 2); = false 3 = means the values and the data types
+// console.log("2" == 2); = true 2 = means the values only
 
 

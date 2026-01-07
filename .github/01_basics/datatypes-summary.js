@@ -22,14 +22,15 @@ let myObj = {
     age: 23,
 } // Objects [mainly in brackets, declaring variable not needed]
 const myFunction =function(){
-    // console.log("hello world");
+    console.log("hello world");
 }
-// console.log(typeof heroes);// = object
-// console.log(typeof bigNumber); // = Bigint
-// console.log(typeof outsideTemp);// = object
-// console.log(typeof scoreValue);// = number
-// console.log(typeof userEmail);// = undefined
-// console.log(typeof myFunction);// = function
+console.log(heroes);
+console.log(typeof heroes);// = object
+console.log(typeof bigNumber); // = Bigint
+console.log(typeof outsideTemp);// = object
+console.log(typeof scoreValue);// = number
+console.log(typeof userEmail);// = undefined
+console.log(typeof myFunction);// = function
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
@@ -48,5 +49,7 @@ let userTwo = userOne
 userTwo.email = "hitesh@google.com"// object's data changed 
 console.log(userOne.email);
 console.log(userTwo.email);// Heaps = Keeps the object itself
+console.log(userTwo.upi)
+console.log(userOne === userTwo)
 
 

@@ -1,4 +1,4 @@
-const accountId = 144553
+// node .github/01_basics/01_variables.js
 let accountEmail = "hitesh@google.com"
 var accountPassword = "12345"
 accountCity = "Jaipur"
@@ -8,8 +8,8 @@ let accountState;
 accountEmail = "hc@hc.com"
 accountPassword = "21212121"
 accountCity = "Bengaluru"
-console.log(accountId);
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+// console.log(accountId);
+console.table([accountEmail, accountPassword, accountCity, accountState])
 
 /*
 Prefer not to use var.
