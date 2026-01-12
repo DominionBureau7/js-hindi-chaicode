@@ -4,14 +4,14 @@
 const marvel_heroes = ["thor", "ironman", "spidermam"];
 const dc_heroes = ["superman", "flash", "batman"]; 
 
-// marvel_heroes.push(dc_heroes);
-// console.log(marvel_heroes);// this will add the dc_heroes array as a single element at the end of marvel_heroes array. Array within Array.
+ marvel_heroes.push(dc_heroes);
+console.log(marvel_heroes);// this will add the dc_heroes array as a single element at the end of marvel_heroes array. Array within Array.
 
-// const allHeroes = marvel_heroes.concat(dc_heroes);
-// console.log(allHeroes);// this will merge both arrays into a single array. So, push and concat are similar but different in this case.
+const allHeroes = marvel_heroes.concat(dc_heroes);
+console.log(allHeroes);// this will merge both arrays into a single array. So, push and concat are similar but different in this case.
 
-// const allNewHeroes = [...marvel_heroes, ...dc_heroes];// spread operator = here taking 2 glasses and dropping them on the floor. the glass spreads all over the floor.
-// console.log(allNewHeroes);
+const allNewHeroes = [...marvel_heroes, ...dc_heroes];// spread operator = here taking 2 glasses and dropping them on the floor. the glass spreads all over the floor.
+console.log(allNewHeroes);
 
 
 ///// Push = used less, Concat and Spread operator = used more often to merge arrays.//////
