@@ -58,6 +58,7 @@ if (true) {
 //     return num + 1
 // }// This is a function. Technique 1
 // console.log(addOne(5))//= 6
+
 // const addTwo = function (num){
 //     return num + 2
 // }// This is a function expression. Technique 2

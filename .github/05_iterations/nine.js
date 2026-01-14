@@ -19,7 +19,7 @@ const myNums = [1, 2, 3]
 // const myTotal = myNums.reduce(function (acc, currval){
 //     console.log(`acc: ${acc} and currval: ${currval}`);
 //     return acc + currval
-// },0)// Here 0 is given as an initial value my user to start with. its important. The game here - Accumulator = 0, Current value = 1, then added and answer = 3, now this 3 will be taken as an accumulator for next repetition.
+// },0)// Here 0 is given as an initial value my user to start with. its important. The game here - Accumulator = 0, Current value = 1, then added and answer = 1, now this 3 will be taken as an accumulator for next repetition = 3.
 // console.log(myTotal);// 6 
 
 

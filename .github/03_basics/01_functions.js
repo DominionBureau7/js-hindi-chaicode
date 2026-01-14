@@ -71,6 +71,6 @@ const myNewArray = [200, 400, 100, 600];// Array defined.
 function returnSecondValue(getArray){
     return getArray[1]
 }// Function defined.
-console.log(returnSecondValue(myNewArray));// 40
+console.log(returnSecondValue(myNewArray));// 400
 //_____________or_____________________
 console.log(returnSecondValue([200, 400, 100, 600]));// = 400 Array passed directly.
