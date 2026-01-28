@@ -59,3 +59,21 @@ if(height === ''|| height <0 || isNaN(height) ){
 }
 })
 ```
+
+### Project 3
+``` Javascript 
+const clock = document.getElementById('clock')//   or
+//const clock = document.querySelector('#clock') 
+
+//let date = new Date()
+//console.log(date.toLocaleTimeString());// Here the current time will be shown but only in Console. So to get that running in our desired way -----
+// setInterval(function(){},1000) - we will use this for time clocking.
+setInterval(function(){
+  let date = new Date()
+//console.log(date.toLocaleTimeString());
+clock.innerHTML = date.toLocaleTimeString()// - Gets the current time and displays it inside the HTML element called 'clock'.
+},1000) // Here in console we will have a new time value every second. But we dont need it to show in console rather in out clock. so we comment it whole. 9th line
+```
+
+### Project 4
+``` Javascript
