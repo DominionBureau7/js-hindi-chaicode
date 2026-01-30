@@ -1,0 +1,1 @@
+// Javascript is a sequentially run language

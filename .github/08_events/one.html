@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").onclick = function(){
+    //     alert('Owl clicked')
+    // } - This is a limited method but event listener is a better option as it provides for propogation.
+    // attach event
+    // jQuery - on event listener
+    // Mostly you'll get browser events or environment events.
+    // Study these types of events = type, timestamps, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, sfiftKey, keyCode.
+    // Event propogation - 1) Event bubbling  2) Event Capturing
+
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("clicked inside the ul")
+    // }, false)// in console = clicked inside the ul
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    // }, false)// in console = owl clicked, clicked inside the ul. (event bubbling = inner to outer to outer, in false only)
+    // // document.getElementById("owl").addEventListener('click', function(e){
+    // //     console.log("owl clicked")
+    // // }, true)// in console = clicked inside the ul, owl clicked. (event capturing = outer to inner to inner, in true only)
+    // // document.getElementById("owl").addEventListener('click', function(e){
+    // //     console.log("owl clicked")
+    // //     e.stopPropagation()// = this will stop propagation 
+    // // }, true)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log('google clicked')
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        //console.log(e)// pointers in console
+        //console.log(e.target)// shows the target address of the click in console.
+        //// shows the target address + parent body of the click in console.
+        console.log(e.target.tagName)
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+         // = this is one way of removing it________________________or_____________
+        //removeIt.parentNode.removeChild(removeIt)
+    },false)
+</script>
+</html>
