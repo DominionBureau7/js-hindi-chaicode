@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131;">
+    <button id = "Orange">Orange</button>
+    <button id = "Green">Green</button>
+</body>
+<script>
+    // _____________________________________________________________________Lexical scoping_______________________________________________________________
+    // function init() {
+    //     let name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name); 
+    //         }
+    //     displayName();
+    // }
+    // init();
+    function outer(){
+        let username = "hitesh"
+        console.log("Outer", secret);
+        
+        function inner(){
+            let secret = "my123"// Brother 1
+            console.log("Inner", username);//. Brother 2
+        }
+        function innerTwo(){
+            console.log("innerTwo");
+            console.log(secret);// Error = Outer function can be accessed through the inner function but no  inner functions at the same level or scope will share anything.
+            
+        }
+        inner()// function called.
+        innerTwo()// function called
+    }
+    outer()// outer function called.
+    console.log("Too much outer", username);// Any variable declared in the function is not accessible from outside.
+    //___________________________________________________explaination__________________________________________________________//
+    // outer() is the father of the house. He owns username = "hitesh". This makes username the family surname—everyone inside the house can use it, but no one outside can. Now inside outer(), there are two sons: inner() and innerTwo()—they are brothers, living on the same floor. inner() creates its own child called secret = "my123". That secret is inner’s personal locker—only inner() can open it. When inner() logs username, it works because children can always use their father’s property (lexical scoping). 
+    // Now the problem starts when outer() tries to log secret before the child even exists—the father cannot access a child’s locker, so console.log("Outer", secret) throws an error. Then innerTwo() also tries to access secret. Even though innerTwo() is a brother of inner(), siblings do not share private lockers in JavaScript. Only parents → children access is allowed, never sideways. So console.log(secret) inside innerTwo() fails again. Finally, outside the house, the world tries to access username. That fails too, because family matters stay inside the house—variables declared inside a function are not visible outside. 
+    // In short: parents can’t access children’s variables, siblings can’t access each other’s variables, but children can always access parents’ variables. That rule is lexical scoping, and JavaScript never breaks family boundaries.
+
+
+
+
+</script>
+//_____________________________________________________________________Closure____________________________________________________________________________
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //         }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    <script>
+        // document.getElementById("Orange").onclick = function(){
+        //     document.body.style.backgroundColor =`orange`
+        // }
+        // document.getElementById("Green").onclick = function(){
+        //     document.body.style.backgroundColor =`green`
+        // }
+        function clickHandler(color){
+            //document.body.style.backgroundColor = `${color}`// == This wont work.
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }// This is lexical scoping at its best.
+        }
+        document.getElementById('Orange').onclick = clickHandler("orange")
+        document.getElementById('Green').onclick = clickHandler("green")
+    </script>
+
+</html>
